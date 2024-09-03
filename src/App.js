@@ -1,9 +1,11 @@
 import React from 'react';
-import PersonalWebsite from './components/PersonalWebsite';
+import CoolPersonalHomepage from './components/CoolPersonalHomepage';
 
 function App() {
   return (
-    <PersonalWebsite />
+    <div className="App">
+      <CoolPersonalHomepage />
+    </div>
   );
 }
 
