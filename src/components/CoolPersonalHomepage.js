@@ -4,13 +4,11 @@ import {
   Github,
   Linkedin,
   Mail,
-  FileText,
   User,
   BookOpen,
   Briefcase,
   GraduationCap,
   Code,
-  FolderOpen,
   Phone,
 } from "lucide-react";
 import TypingAnimation from "./TypingAnimation";
