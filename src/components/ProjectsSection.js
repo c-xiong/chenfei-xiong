@@ -1,5 +1,5 @@
 import React from 'react';
-import { FolderOpen, Github, ExternalLink } from 'lucide-react';
+import { FolderOpen, Github} from 'lucide-react';
 
 const ProjectCard = ({ title, description, techStack, link, github }) => (
   <div className="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:scale-105">

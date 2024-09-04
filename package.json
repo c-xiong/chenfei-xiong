@@ -39,5 +39,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://imred42.github.io/chenfei-xiong"
+  "homepage": "https://imred42.github.io/chenfei-xiong",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
 }
