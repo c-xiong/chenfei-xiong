@@ -13,6 +13,9 @@ import {
   FolderOpen,
   Phone,
 } from "lucide-react";
+import TypingAnimation from "./TypingAnimation";
+
+import ProjectsSection from "./ProjectsSection";
 
 const CoolPersonalHomepage = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -30,10 +33,10 @@ const CoolPersonalHomepage = () => {
   };
 
   const skills = {
-    "Programming Languages": ["Python", "Java", "JavaScript", "C++"],
-    Frameworks: ["React", "Vue.js", "Spring Boot"],
-    Tools: ["Git", "Docker", "Jenkins", "Kubernetes"],
-    Databases: ["SQL", "MongoDB", "Redis", "PostgreSQL"],
+    "Programming Languages": ["Python", "Java", "JavaScript", "C++", "SQL"],
+    Frameworks: ["React", "Vue.js", "Spring Boot", "Node.js", "Express.js"],
+    Tools: ["Git", "Docker", "Figma"],
+    Databases: ["MongoDB", "Redis", "PostgreSQL"],
     Languages: ["English(C1)", "Chinese(Native)", "German(Beginner)"],
   };
 
@@ -80,7 +83,7 @@ const CoolPersonalHomepage = () => {
             }`}
           >
             <h1 className="text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-              Chenfei Xiong
+              <TypingAnimation text="Chenfei Xiong" speed={150} />
             </h1>
             <p className="text-2xl mb-8">
               Master's Student | Software Engineer
@@ -152,9 +155,14 @@ const CoolPersonalHomepage = () => {
                       University of Zurich
                     </h4>
                     <p className="text-gray-300">
+                      Master of Arts in Computational Linguistics and Language
+                      Technology
+                    </p>
+                    <p className="text-gray-400">Sep. 2024 – Present</p>
+                    <p className="text-gray-300">
                       Master of Science in Informatics
                     </p>
-                    <p className="text-gray-400">Sep. 2022 – Present</p>
+                    <p className="text-gray-400">Sep. 2022 – June. 2024</p>
                     <p className="text-gray-400">Zurich, Switzerland</p>
                   </div>
                   <div>
@@ -167,6 +175,17 @@ const CoolPersonalHomepage = () => {
                     </p>
                     <p className="text-gray-400">Sep. 2018 – June. 2022</p>
                     <p className="text-gray-400">Wuhan, China</p>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-blue-300">
+                      National University of Singapore
+                    </h4>
+                    <p className="text-gray-300">Summer School</p>
+                    <p className="text-gray-300">
+                      Courses: Structure and Interpretation of Computer
+                      Programs; Machine Learning and Artificial Intelligence
+                    </p>
+                    <p className="text-gray-400">May. 2021 – Dec. 2021</p>
                   </div>
                 </div>
               </div>
@@ -216,43 +235,7 @@ const CoolPersonalHomepage = () => {
           </div>
         </section>
 
-        <section
-          id="projects"
-          className="min-h-screen flex items-center justify-center py-20"
-        >
-          <div className="container mx-auto px-6">
-            <h2 className="text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-              Projects
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {[
-                {
-                  title: "Project 1",
-                  description: "A brief description of project 1",
-                },
-                {
-                  title: "Project 2",
-                  description: "A brief description of project 2",
-                },
-                {
-                  title: "Project 3",
-                  description: "A brief description of project 3",
-                },
-              ].map((project, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:scale-105"
-                >
-                  <div className="flex items-center mb-4">
-                    <FolderOpen className="w-6 h-6 mr-2 text-yellow-400" />
-                    <h3 className="text-2xl font-bold">{project.title}</h3>
-                  </div>
-                  <p className="text-gray-300">{project.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ProjectsSection />
 
         <section
           id="contact"
@@ -285,17 +268,17 @@ const CoolPersonalHomepage = () => {
                   <Linkedin size={32} />
                 </a>
                 <a
-                  href="mailto:chenfei.xiong@outlook.com"
+                  href="mailto:cf.xiong@outlook.com"
                   className="text-white hover:text-blue-400 transition-colors duration-300"
                 >
                   <Mail size={32} />
                 </a>
-                <a
+                {/* <a
                   href="www.google.com"
                   className="text-white hover:text-blue-400 transition-colors duration-300"
                 >
                   <FileText size={32} />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
