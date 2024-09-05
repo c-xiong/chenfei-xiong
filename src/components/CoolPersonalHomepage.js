@@ -13,7 +13,6 @@ import {
 import TypingAnimation from "./TypingAnimation";
 
 import ProjectsSection from "./ProjectsSection";
-import avatar from "../images/profile3.JPG";
 const CoolPersonalHomepage = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
@@ -137,7 +136,7 @@ const CoolPersonalHomepage = () => {
               <div className="flex flex-col items-center">
                 <div className="w-64 h-64 rounded-full overflow-hidden mb-6 border-4 border-blue-400 shadow-lg">
                   <img
-                    src={avatar}
+                    src="/images/profile3.JPG"
                     alt="Chenfei Xiong"
                     className="w-full h-full object-cover"
                   />
