@@ -6,7 +6,6 @@ import {
   Mail,
   User,
   BookOpen,
-  Briefcase,
   GraduationCap,
   Code,
   Phone,
@@ -14,7 +13,7 @@ import {
 import TypingAnimation from "./TypingAnimation";
 
 import ProjectsSection from "./ProjectsSection";
-
+import avatar from "../images/profile3.JPG";
 const CoolPersonalHomepage = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
@@ -22,12 +21,43 @@ const CoolPersonalHomepage = () => {
 
   useEffect(() => {
     setIsVisible(true);
+
+    const handleScroll = () => {
+      const sections = ["home", "about", "skills", "projects", "contact"];
+      let currentSection = "home";
+
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            currentSection = section;
+          }
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollTo = (id) => {
     const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: "smooth" });
-    setActiveSection(id);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   const skills = {
@@ -103,88 +133,96 @@ const CoolPersonalHomepage = () => {
             <h2 className="text-5xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
               About Me
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center mb-4">
-                  <User className="w-6 h-6 mr-2 text-blue-400" />
-                  <h3 className="text-2xl font-semibold">Who I Am</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <div className="flex flex-col items-center">
+                <div className="w-64 h-64 rounded-full overflow-hidden mb-6 border-4 border-blue-400 shadow-lg">
+                  <img
+                    src={avatar}
+                    alt="Chenfei Xiong"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  I'm a master's student at the University of Zurich with a
-                  passion for software engineering. My journey in tech is driven
-                  by a curiosity to solve complex problems and create impactful
-                  solutions. Beyond coding, I enjoy tinkering with small
-                  projects and exploring the outdoors through hiking.
-                </p>
-              </div>
-              <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center mb-4">
-                  <BookOpen className="w-6 h-6 mr-2 text-green-400" />
-                  <h3 className="text-2xl font-semibold">What I'm Learning</h3>
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold mb-2">Chenfei Xiong</h3>
+                  <p className="text-blue-300">
+                    Master's Student | Software Engineer
+                  </p>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  My studies focus on advanced programming techniques, data
-                  analysis, and both microservices and monolithic architectures.
-                  I'm constantly expanding my knowledge to stay at the forefront
-                  of technology.
-                </p>
               </div>
-              <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center mb-4">
-                  <Briefcase className="w-6 h-6 mr-2 text-yellow-400" />
-                  <h3 className="text-2xl font-semibold">What I'm Seeking</h3>
+              <div className="flex flex-col justify-center">
+                <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg mb-6">
+                  <div className="flex items-center mb-4">
+                    <User className="w-6 h-6 mr-2 text-blue-400" />
+                    <h3 className="text-2xl font-semibold">Who I Am</h3>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    I'm a master's student at the University of Zurich with a
+                    passion for software engineering. My journey in tech is
+                    driven by a curiosity to solve complex problems and create
+                    impactful solutions. Beyond coding, I enjoy tinkering with
+                    small projects and exploring the outdoors through hiking.
+                  </p>
                 </div>
-                <p className="text-gray-300 leading-relaxed">
-                  I'm actively looking for internship or thesis opportunities to
-                  apply my skills in real-world projects. I'm eager to
-                  contribute to innovative teams and gain hands-on experience in
-                  software development.
-                </p>
+                <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg">
+                  <div className="flex items-center mb-4">
+                    <BookOpen className="w-6 h-6 mr-2 text-green-400" />
+                    <h3 className="text-2xl font-semibold">
+                      What I'm Learning
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    My current focus is on mastering the technologies required
+                    for developing high-performance backend systems, with an
+                    emphasis on optimizing efficiency and scalability.
+                    Additionally, I'm exploring natural language processing
+                    (NLP) and large language models, delving into their advanced
+                    applications and potential impact on modern AI systems.
+                  </p>
+                </div>
               </div>
+            </div>
 
-              <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 col-span-1 md:col-span-2 lg:col-span-3">
-                <div className="flex items-center mb-4">
-                  <GraduationCap className="w-6 h-6 mr-2 text-purple-400" />
-                  <h3 className="text-2xl font-semibold">Education</h3>
+            <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 col-span-1 md:col-span-2 lg:col-span-3 mt-8">
+              <div className="flex items-center mb-4">
+                <GraduationCap className="w-6 h-6 mr-2 text-purple-400" />
+                <h3 className="text-2xl font-semibold">Education</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-xl font-semibold text-blue-300">
+                    University of Zurich
+                  </h4>
+                  <p className="text-gray-300">
+                    Master of Arts in Computational Linguistics and Language
+                    Technology (minor in Neuroinformatics)
+                  </p>
+                  <p className="text-gray-400">Sep. 2024 – Present</p>
+                  <p className="text-gray-300">
+                    Master of Science in Informatics
+                  </p>
+                  <p className="text-gray-400">Sep. 2022 – June. 2024</p>
+                  <p className="text-gray-400">Zurich, Switzerland</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="text-xl font-semibold text-blue-300">
-                      University of Zurich
-                    </h4>
-                    <p className="text-gray-300">
-                      Master of Arts in Computational Linguistics and Language
-                      Technology
-                    </p>
-                    <p className="text-gray-400">Sep. 2024 – Present</p>
-                    <p className="text-gray-300">
-                      Master of Science in Informatics
-                    </p>
-                    <p className="text-gray-400">Sep. 2022 – June. 2024</p>
-                    <p className="text-gray-400">Zurich, Switzerland</p>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-blue-300">
-                      Huazhong University of Science and Technology
-                    </h4>
-                    <p className="text-gray-300">
-                      Bachelor of Engineering in Material Science and
-                      Engineering
-                    </p>
-                    <p className="text-gray-400">Sep. 2018 – June. 2022</p>
-                    <p className="text-gray-400">Wuhan, China</p>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-blue-300">
-                      National University of Singapore
-                    </h4>
-                    <p className="text-gray-300">Summer School</p>
-                    <p className="text-gray-300">
-                      Courses: Structure and Interpretation of Computer
-                      Programs; Machine Learning and Artificial Intelligence
-                    </p>
-                    <p className="text-gray-400">May. 2021 – Dec. 2021</p>
-                  </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-blue-300">
+                    Huazhong University of Science and Technology
+                  </h4>
+                  <p className="text-gray-300">
+                    Bachelor of Engineering in Material Science and Engineering
+                  </p>
+                  <p className="text-gray-400">Sep. 2018 – June. 2022</p>
+                  <p className="text-gray-400">Wuhan, China</p>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-blue-300">
+                    National University of Singapore
+                  </h4>
+                  <p className="text-gray-300">Summer School</p>
+                  <p className="text-gray-300">
+                    Courses: Structure and Interpretation of Computer Programs;
+                    Machine Learning and Artificial Intelligence
+                  </p>
+                  <p className="text-gray-400">May. 2021 – Dec. 2021</p>
                 </div>
               </div>
             </div>
@@ -249,8 +287,7 @@ const CoolPersonalHomepage = () => {
                 <h3 className="text-2xl font-semibold">Contact Me</h3>
               </div>
               <p className="text-xl mb-8 text-gray-300">
-                Feel free to reach out for collaborations or just a friendly
-                hello
+                Feel free to reach out!
               </p>
               <div className="flex justify-center space-x-6">
                 <a
@@ -266,17 +303,11 @@ const CoolPersonalHomepage = () => {
                   <Linkedin size={32} />
                 </a>
                 <a
-                  href="mailto:cf.xiong@outlook.com"
+                  href="mailto:chenfei.xiong@outlook.com"
                   className="text-white hover:text-blue-400 transition-colors duration-300"
                 >
                   <Mail size={32} />
                 </a>
-                {/* <a
-                  href="www.google.com"
-                  className="text-white hover:text-blue-400 transition-colors duration-300"
-                >
-                  <FileText size={32} />
-                </a> */}
               </div>
             </div>
           </div>
