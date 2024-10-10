@@ -42,7 +42,7 @@ const ProjectsSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         <ProjectCard
           title="Jobify - Job tracking app"
-          description="Jobify is an intuitive job application tracking tool designed to help job seekers organize their job search process efficiently. It allows users to log and monitor their job applications, set reminders for important dates, and visualize their job search progress, making the often stressful job hunting experience more manageable and structured."
+          description="Jobify is a job application tracking tool. "
           techStack="React.js, Node.js, Express.js, MongoDB, JWT, Cloudinary, recharts"
           github="https://github.com/imred42/Jobify"
           link="https://jobify-devf.onrender.com/"
@@ -55,7 +55,7 @@ const ProjectsSection = () => (
         />
         <ProjectCard
           title="Stratego - Online Game"
-          description="This project brings the classic board game Stratego to the digital world, allowing strategy enthusiasts worldwide to enjoy the game online. It features user registration, real-time gameplay, and player statistics tracking."
+          description="This project brings the classic board game Stratego to the digital world, allowing strategy enthusiasts to enjoy the game online."
           techStack="Java, Spring Boot, ReactJS, JUnit, WebSocket, Google Cloud Platform"
           github="https://github.com/sopra-fs23-group-22/sopra-fs23-group-22-client"
         />

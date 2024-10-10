@@ -61,8 +61,8 @@ const CoolPersonalHomepage = () => {
 
   const skills = {
     "Programming Languages": ["Python", "Java", "JavaScript", "C++", "SQL"],
-    Frameworks: ["React", "Vue.js", "Spring Boot", "Node.js", "Express.js"],
-    Tools: ["Git", "Docker", "Figma"],
+    Frameworks: ["React", "Vue.js", "Spring Boot", "Express.js", "Django"],
+    Tools: ["Git", "Docker"],
     Databases: ["MongoDB", "Redis", "PostgreSQL"],
     Languages: ["English(C1)", "Chinese(Native)", "German(Beginner)"],
   };
@@ -113,7 +113,7 @@ const CoolPersonalHomepage = () => {
               <TypingAnimation text="Chenfei Xiong" speed={150} />
             </h1>
             <p className="text-2xl mb-8">
-              Master's Student | Software Engineer
+              Master's Student | Software Developer | A Dog Person
             </p>
             <button
               onClick={() => scrollTo("about")}
@@ -144,7 +144,7 @@ const CoolPersonalHomepage = () => {
                 <div className="text-center">
                   <h3 className="text-2xl font-semibold mb-2">Chenfei Xiong</h3>
                   <p className="text-blue-300">
-                    Master's Student | Software Engineer
+                    Master's Student | Software Developer | A Dog Person
                   </p>
                 </div>
               </div>
@@ -156,10 +156,8 @@ const CoolPersonalHomepage = () => {
                   </div>
                   <p className="text-gray-300 leading-relaxed">
                     I'm a master's student at the University of Zurich with a
-                    passion for software engineering. My journey in tech is
-                    driven by a curiosity to solve complex problems and create
-                    impactful solutions. Beyond coding, I enjoy tinkering with
-                    small projects and exploring the outdoors through hiking.
+                    passion for software development. I enjoy tinkering with
+                    different software projects.
                   </p>
                 </div>
                 <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg">
@@ -170,12 +168,7 @@ const CoolPersonalHomepage = () => {
                     </h3>
                   </div>
                   <p className="text-gray-300 leading-relaxed">
-                    My current focus is on mastering the technologies required
-                    for developing high-performance backend systems, with an
-                    emphasis on optimizing efficiency and scalability.
-                    Additionally, I'm exploring natural language processing
-                    (NLP) and large language models, delving into their advanced
-                    applications and potential impact on modern AI systems.
+                  I'm developing skills in robust software engineering while exploring research areas in machine translation, large language models, and computational neuroscience.
                   </p>
                 </div>
               </div>
@@ -192,14 +185,11 @@ const CoolPersonalHomepage = () => {
                     University of Zurich
                   </h4>
                   <p className="text-gray-300">
-                    Master of Arts in Computational Linguistics and Language
-                    Technology (minor in Neuroinformatics)
+                    MA in Computational Linguistics and Language
+                    Technology
                   </p>
+                  <p className="text-gray-400"> minor in neuroinformatics</p>
                   <p className="text-gray-400">Sep. 2024 – Present</p>
-                  <p className="text-gray-300">
-                    Master of Science in Informatics
-                  </p>
-                  <p className="text-gray-400">Sep. 2022 – June. 2024</p>
                   <p className="text-gray-400">Zurich, Switzerland</p>
                 </div>
                 <div>
@@ -207,7 +197,7 @@ const CoolPersonalHomepage = () => {
                     Huazhong University of Science and Technology
                   </h4>
                   <p className="text-gray-300">
-                    Bachelor of Engineering in Material Science and Engineering
+                    BEng. in Material Science and Engineering
                   </p>
                   <p className="text-gray-400">Sep. 2018 – June. 2022</p>
                   <p className="text-gray-400">Wuhan, China</p>
@@ -217,10 +207,6 @@ const CoolPersonalHomepage = () => {
                     National University of Singapore
                   </h4>
                   <p className="text-gray-300">Summer School</p>
-                  <p className="text-gray-300">
-                    Courses: Structure and Interpretation of Computer Programs;
-                    Machine Learning and Artificial Intelligence
-                  </p>
                   <p className="text-gray-400">May. 2021 – Dec. 2021</p>
                 </div>
               </div>
