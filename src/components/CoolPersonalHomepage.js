@@ -9,6 +9,7 @@ import {
   GraduationCap,
   Code,
   Phone,
+  FileText,
 } from "lucide-react";
 import TypingAnimation from "./TypingAnimation";
 
@@ -102,7 +103,7 @@ const CoolPersonalHomepage = () => {
       <main>
         <section
           id="home"
-          className="h-screen flex items-center justify-center"
+          className="h-screen flex items-center justify-center bg-gray-900 bg-opacity-50"
         >
           <div
             className={`text-center transition-opacity duration-1000 ${
@@ -292,6 +293,13 @@ const CoolPersonalHomepage = () => {
                   className="text-white hover:text-blue-400 transition-colors duration-300"
                 >
                   <Mail size={32} />
+                </a>
+                <a
+                  href="/Chenfei_Xiong_s_Resume_sde_en.pdf"
+                  download="Chenfei_Xiong_Resume.pdf" // Ensure the download attribute is set
+                  className="text-white hover:text-blue-400 transition-colors duration-300"
+                >
+                  <FileText size={32} />
                 </a>
               </div>
             </div>
