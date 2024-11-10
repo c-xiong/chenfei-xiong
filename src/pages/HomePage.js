@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import {
   ChevronDown,
   Github,
-  Linkedin,
   Mail,
   User,
   BookOpen,
   GraduationCap,
   Code,
   Phone,
-  FileText,
 } from "lucide-react";
 import TypingAnimation from "../components/TypingAnimation";
 
