@@ -150,7 +150,7 @@ const CoolPersonalHomepage = () => {
               <div className="flex flex-col items-center">
                 <div className="w-64 h-64 rounded-full overflow-hidden mb-6 border-4 border-blue-400 shadow-lg">
                   <img
-                    src="/images/profile3.JPG"
+                    src="/images/avatar.JPG"
                     alt="Chenfei Xiong"
                     className="w-full h-full object-cover"
                   />
