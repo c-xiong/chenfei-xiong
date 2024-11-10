@@ -11,9 +11,9 @@ import {
   Phone,
   FileText,
 } from "lucide-react";
-import TypingAnimation from "./TypingAnimation";
+import TypingAnimation from "../components/TypingAnimation";
 
-import ProjectsSection from "./ProjectsSection";
+import ProjectsSection from "../components/ProjectsSection";
 const CoolPersonalHomepage = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [isVisible, setIsVisible] = useState(false);
@@ -103,8 +103,23 @@ const CoolPersonalHomepage = () => {
       <main>
         <section
           id="home"
-          className="h-screen flex items-center justify-center bg-gray-900 bg-opacity-50"
+          className="h-screen flex items-center justify-center bg-gray-900 bg-opacity-50 relative overflow-hidden"
         >
+          <div className="absolute inset-0">
+            <div className="particles-container">
+              {[...Array(20)].map((_, i) => (
+                <div
+                  key={i}
+                  className="particle"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 2}s`,
+                  }}
+                />
+              ))}
+            </div>
+          </div>
           <div
             className={`text-center transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
@@ -114,7 +129,7 @@ const CoolPersonalHomepage = () => {
               <TypingAnimation text="Chenfei Xiong" speed={150} />
             </h1>
             <p className="text-2xl mb-8">
-              Master's Student | Software Developer | A Dog Person
+              Master's Student | Software Developer
             </p>
             <button
               onClick={() => scrollTo("about")}
@@ -145,7 +160,7 @@ const CoolPersonalHomepage = () => {
                 <div className="text-center">
                   <h3 className="text-2xl font-semibold mb-2">Chenfei Xiong</h3>
                   <p className="text-blue-300">
-                    Master's Student | Software Developer | A Dog Person
+                    Master's Student | Software Developer
                   </p>
                 </div>
               </div>
@@ -156,9 +171,7 @@ const CoolPersonalHomepage = () => {
                     <h3 className="text-2xl font-semibold">Who I Am</h3>
                   </div>
                   <p className="text-gray-300 leading-relaxed">
-                    I'm a master's student at the University of Zurich with a
-                    passion for software development. I enjoy tinkering with
-                    different software projects.
+                    I'm a passionate master's student at the University of Zurich.
                   </p>
                 </div>
                 <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg">
@@ -272,9 +285,7 @@ const CoolPersonalHomepage = () => {
                 <Phone className="w-6 h-6 mr-2 text-blue-400" />
                 <h3 className="text-2xl font-semibold">Contact Me</h3>
               </div>
-              <p className="text-xl mb-8 text-gray-300">
-                Feel free to reach out!
-              </p>
+              
               <div className="flex justify-center space-x-6">
                 <a
                   href="https://github.com/imred42"
@@ -283,23 +294,10 @@ const CoolPersonalHomepage = () => {
                   <Github size={32} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/chenfei-xiong-180505242/"
-                  className="text-white hover:text-blue-400 transition-colors duration-300"
-                >
-                  <Linkedin size={32} />
-                </a>
-                <a
                   href="mailto:chenfei.xiong@outlook.com"
                   className="text-white hover:text-blue-400 transition-colors duration-300"
                 >
                   <Mail size={32} />
-                </a>
-                <a
-                  href="/Chenfei_Xiong_s_Resume_sde_en.pdf"
-                  download="Chenfei_Xiong_Resume.pdf" // Ensure the download attribute is set
-                  className="text-white hover:text-blue-400 transition-colors duration-300"
-                >
-                  <FileText size={32} />
                 </a>
               </div>
             </div>
