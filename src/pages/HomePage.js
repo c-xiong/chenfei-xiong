@@ -46,7 +46,6 @@ const ProjectCard = ({ title, description, techStack, link, github }) => (
 
 const HomePage = () => {
   const [activeSection, setActiveSection] = useState("home");
-  const [isVisible, setIsVisible] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== "undefined") {
       return (
@@ -58,8 +57,6 @@ const HomePage = () => {
   });
 
   useEffect(() => {
-    setIsVisible(true);
-
     const handleScroll = () => {
       const sections = ["home", "projects", "contact"];
       let currentSection = "home";
