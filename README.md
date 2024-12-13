@@ -1,2 +1,2 @@
-# My Personal website
-[click to visist](https://chenfeixiong.com/)
+# Chenfei's Personal website
+https://chenfeixiong.com/

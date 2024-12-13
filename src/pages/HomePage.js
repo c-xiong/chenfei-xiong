@@ -180,7 +180,7 @@ const HomePage = () => {
                       <p className="text-base text-gray-600 dark:text-gray-400 mt-1">
                         MA in Computational Linguistics and Language Technology
                       </p>
-                      <p className="text-sm text-gray-500 mt-1">2024 - Present</p>
+                      <p className="text-sm text-gray-500 mt-1">2022 - Present</p>
                     </li>
                     <li className="border-l-4 border-gray-200 dark:border-gray-700 pl-6">
                       <p className="text-xl font-semibold">
@@ -244,7 +244,7 @@ const HomePage = () => {
                 <ProjectCard
                   title="Jobify - Job tracking app"
                   description="A comprehensive job application tracking tool built with modern web technologies."
-                  techStack="React.js, Node.js, Express.js, MongoDB, JWT"
+                  techStack="React, NodeJS, ExpressJS, MongoDB, JWT"
                   github="https://github.com/imred42/Jobify"
                   link="https://jobify-devf.onrender.com/"
                 />
@@ -257,7 +257,7 @@ const HomePage = () => {
                 <ProjectCard
                   title="Stratego - Online Game"
                   description="Digital adaptation of the classic board game Stratego with online versus."
-                  techStack="Java, Spring Boot, ReactJS, WebSocket"
+                  techStack="Java, Spring Boot, React, WebSocket"
                   github="https://github.com/sopra-fs23-group-22/sopra-fs23-group-22-client"
                 />
               </div>
