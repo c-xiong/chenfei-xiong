@@ -186,10 +186,10 @@ const HomePage = () => {
                       <p className="text-xl font-semibold">
                         Huazhong University of Science and Technology
                       </p>
-                      <p className="text-lg text-gray-600 dark:text-gray-400 font-sans">
+                      <p className="text-base text-gray-600 dark:text-gray-400 mt-1">
                         BEng in Material Science and Engineering
                       </p>
-                      <p className="text-gray-500">2018 - 2022</p>
+                      <p className="text-sm text-gray-500 mt-1">2018 - 2022</p>
                     </li>
                   </ul>
                 </div>
@@ -227,8 +227,8 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section id="projects" className="py-24 bg-gray-50 dark:bg-gray-800/50">
-          <div className="container mx-auto px-4 md:px-6">
+        <section id="projects" className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800/50">
+          <div className="container mx-auto px-4 md:px-6 h-full">
             <h2 className="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-gray-100">
               Projects
             </h2>
