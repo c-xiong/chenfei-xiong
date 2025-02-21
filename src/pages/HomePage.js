@@ -207,7 +207,7 @@ const HomePage = () => {
                       <Mail size={28} />
                     </a>
                     <a
-                      href="https://github.com/imred42"
+                      href="https://github.com/c-xiong"
                       className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110"
                       aria-label="GitHub"
                     >
@@ -238,21 +238,21 @@ const HomePage = () => {
                   title="Hunspell Live - Spell Checking Tool"
                   description="An open-source customized spell-checking tool that enables real-time spell checking using custom Hunspell dictionaries. Built for developers and linguistic researchers."
                   techStack="Python, TypeScript, Django, React, Docker, PostgreSQL, JWT"
-                  github="https://github.com/imred42/hunspell_live"
+                  github="https://github.com/c-xiong/hunspell_live"
                   link="https://hunspell.chenfeixiong.com/"
                 />
                 <ProjectCard
                   title="Jobify - Job tracking app"
                   description="A comprehensive job application tracking tool built with modern web technologies."
                   techStack="React, NodeJS, ExpressJS, MongoDB, JWT"
-                  github="https://github.com/imred42/Jobify"
+                  github="https://github.com/c-xiong/Jobify"
                   link="https://jobify-devf.onrender.com/"
                 />
                 <ProjectCard
                   title="JoyJoin - Event platform"
                   description="A microservices-based event management platform for organizing and participating in events."
                   techStack="Java, Spring Boot, Vue.js, PostgreSQL, Docker"
-                  github="https://github.com/imred42/JoyJoin"
+                  github="https://github.com/c-xiong/JoyJoin"
                 />
                 <ProjectCard
                   title="Stratego - Online Game"
